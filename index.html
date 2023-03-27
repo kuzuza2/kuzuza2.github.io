@@ -9,7 +9,7 @@ async function chart() {
   const getSsong = await fetch (`https://api-zingmp3-vercel.vercel.app/api/song?type=audio&id=${id}`)
   const sjson = await getSsong.json()
   const linkAudio = sjson.data[128]
-  music.src = linkAudio
+  music.src = `https://mp3-s1-zmp3.zmdcdn.me/bed9fab04df0a4aefde1/6553103812810590959?authen=exp=1680067639~acl=/bed9fab04df0a4aefde1/*~hmac=fe794536714f41af47243b2b4dc47703&fs=MTY3OTg5NDgzOTIxOHx3ZWJWNnwwfDExNy40LjIwMy4xNzQ`
   
 }
 chart()</script>
