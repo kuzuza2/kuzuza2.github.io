@@ -6,9 +6,13 @@ async function chart() {
   const { data } = await getApi.json()
   const id = data.RTChart.items[0].encodeId
   console.log(data)
-  const getSsong = await fetch (`https://api-zingmp3-vercel.vercel.app/api/song?id=${id}`)
+  const getSsong = await fetch (`https://server-tau-six.vercel.app/api/song?id=${id}`, {
+  mode: 'cors'
+  
+})
   const sjson = await getSsong.json()
   const linkAudio = sjson.data[128]
+  console.log(sjson)
   music.src = linkAudio
   
 }
